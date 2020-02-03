@@ -6,6 +6,6 @@ services:
       - 3000:3000
     environment:
       - SERVER_PORT=3000
-    command: npm run dev
+    command: yarn dev
     volumes:
       - ./:/app
