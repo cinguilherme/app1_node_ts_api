@@ -8,8 +8,8 @@ services:
       - 8154:8154
 
   gocd-agent-python:
-    image: gocd-agent-pytest:latest
-    container_name: python-agent
+    image: gocd-agent-node:latest
+    container_name: node-agent
     environment:
       - GO_SERVER_URL=https://gocd-server:8154/go
     depends_on:
