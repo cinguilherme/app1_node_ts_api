@@ -1,8 +1,5 @@
-const a: Number = 8;
+const express = require("express");
 
-const b: String = "10";
+const app = express();
 
-console.log(a);
-console.log(b + "av");
-
-console.log("end");
+app.listen(3000);
