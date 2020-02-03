@@ -3,13 +3,15 @@ services:
   app1-node-api:
     image: app1-node-ts-api:latest
     ports:
-      - 3000:3000
+      - 3333:3333
     environment:
       - SERVER_PORT=3000
-      - MONGO_DB=mongodb://root:example@app1-node-mongodb:27017/admin
+      - MONGO_CONNECT=mongodb://root:example@app1-node-mongodb:27017/admin
     command: yarn dev
     volumes:
       - ./:/app
+    depends_on:
+      - app1-node-mongodb
 
   app1-node-mongodb:
     image: mongo
