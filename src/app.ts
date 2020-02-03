@@ -1,6 +1,7 @@
 import express from "express";
 import cors from "cors";
 import mongoose from "mongoose";
+import routes from "./routes";
 
 const MONGO: string = process.env["MONGO_CONNECT"];
 
@@ -27,9 +28,7 @@ class App {
   }
 
   private routes(): void {
-    this.express.get("/health-check", (_, res) => {
-      return res.send("Health Check");
-    });
+    this.express.use(routes);
   }
 }
 
