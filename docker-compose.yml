@@ -6,6 +6,13 @@ services:
       - 3000:3000
     environment:
       - SERVER_PORT=3000
+      - MONGO_DB=mongodb://root:example@app1-node-mongodb:27017/admin
     command: yarn dev
     volumes:
       - ./:/app
+
+  app1-node-mongodb:
+    image: mongo
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: example
