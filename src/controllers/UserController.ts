@@ -1,4 +1,4 @@
-import User from "../schemas/User";
+import User from '../schemas/User';
 
 class UserController {
   public async index(_, res): Promise<Response> {
