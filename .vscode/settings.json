@@ -1,0 +1,6 @@
+{
+    "eslint.alwaysShowStatus": true,
+    "editor.formatOnSave": true,
+    "prettier.packageManager": "yarn",
+    "prettier.singleQuote": true,
+}
