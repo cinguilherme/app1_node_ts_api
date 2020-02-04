@@ -5,8 +5,7 @@ services:
     ports:
       - 3333:3333
     environment:
-      - SERVER_PORT=3000
-      - MONGO_CONNECT=mongodb://root:example@app1-node-mongodb:27017/admin
+      - MONGO_CONNECT=mongodb://root:example@localhost:27017/admin
     command: yarn dev
     volumes:
       - ./:/app
